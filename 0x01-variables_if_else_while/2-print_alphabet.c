@@ -1,2 +1,17 @@
-#!/bin/bash
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-print_alphabet.c -o 2-print_alphabet
+#include<stdio.h>
+/**
+* main - print all alphabets
+ *
+ * Return: 0
+*/
+int main(void)
+{
+char alphabet = 'a';
+while (alphabet <= 'z')
+{
+	putchar(alphabet);
+	alphabet++;
+}
+putchar('\n');
+return (0);
+}

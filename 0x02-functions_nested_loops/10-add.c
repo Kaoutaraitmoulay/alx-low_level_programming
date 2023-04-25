@@ -1,4 +1,3 @@
-#inlcude "main.h"
 /**
  * add - adds two ints
  * @a : number1 to calculate

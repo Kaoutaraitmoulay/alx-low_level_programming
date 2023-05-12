@@ -1,20 +1,22 @@
+#include "main.h"
+
 /**
- * _memcpy - copies the n bytes first characters
- * from src into dest
- *
- * @dest: string destination
- * @src: string to copy from
- * @n: bytes to copy from src to dest
- *
- * Return: pointer to dest
+ * _memcpy - input function
+ * @dest: input pointer to string address
+ * @src: input pointer to the source
+ * @n: number of bytes
+ * Return: return to dest
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int x = 0;
 
-	for (i = 0; i < n; i++)
+	while (x < n)
 	{
-		*(dest + i) = *(src + i);
+		*(dest + x) = *(src + x);
+		x++;
 	}
 	return (dest);
 }
+

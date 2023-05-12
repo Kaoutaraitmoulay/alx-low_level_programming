@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _islower - _putchar alphabets
  * @c: the number to be checked

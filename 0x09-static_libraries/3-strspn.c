@@ -1,35 +1,24 @@
+#include "main.h"
+
 /**
- * _strspn - calculate the prefix length of the initial segment
- * of a given string that consists entirely of characters
- * from another specified string.
- *
- * @s: string to be checked
- * @accept: set of chars that
- * are allowed in the given tring
- *
- * Return: pointer to s
+ * _strspn - gets the length of a prefix substring
+ * @s: input string to search for substring
+ * @accept: characters that prefix substring must include
+ * Return: return length of substring
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
-	int j = 0;
-	unsigned int pre_length = 0;
+	unsigned int i, j, a_len = 0, len = 0;
 
-	while (*(s + i) != '\0')
-	{
-		while (*(accept + j) != '\0')
-		{
-			if (*(s + i) == *(accept + j))
-			{
-				pre_length++;
-				j = 0;
-				i++;
-			}
+	while (accept[a_len] != '\0')
+		a_len++;
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; j < a_len; j++)
+			if (s[i] == accept[j])
+				len++, j = a_len;
 			else
-				j++;
-		}
-		break;
-	}
-
-	return (pre_length);
+				if (j == a_len - 1)
+					goto exit;
+exit: return (len);
 }

@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _abs - aboslute value
  * @n: the number to be checked

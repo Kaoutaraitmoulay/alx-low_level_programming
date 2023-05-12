@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _isalpha - ASCII range  97-122 / 65-90
  * @c: the number to be checked
